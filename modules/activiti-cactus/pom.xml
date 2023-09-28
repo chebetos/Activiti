@@ -39,7 +39,7 @@
       <!-- necessary for deploying cactus on tomcat.  excluded for jboss below -->
       <groupId>jaxen</groupId>
       <artifactId>jaxen</artifactId>
-      <version>1.1.1</version>
+      <version>2.0.0</version>
     </dependency>
     
 
@@ -160,12 +160,12 @@
             <configuration>
               <tasks>
                 <condition property="cfg.file.name" value="activiti-context.xml" else="activiti.cfg.xml">
-                  <equals arg1="${cfg}" arg2="spring" />
+                  <equals arg1="${cfg}" arg2="spring"/>
                 </condition>
-                <echo message="using configuration src/main/cfg/server.${server}.cfg.${cfg}.tx.${tx}.xml as ${cfg.file.name}" />
-                <echo message="using database properties ${user.home}/.activiti/server/build.${database}.properties" />
+                <echo message="using configuration src/main/cfg/server.${server}.cfg.${cfg}.tx.${tx}.xml as ${cfg.file.name}"/>
+                <echo message="using database properties ${user.home}/.activiti/server/build.${database}.properties"/>
                 <copy tofile="target/classes/${cfg.file.name}" file="src/main/cfg/server.${server}.cfg.${cfg}.tx.${tx}.xml">
-                  <filterset filtersfile="${user.home}/.activiti/server/build.${database}.properties" />
+                  <filterset filtersfile="${user.home}/.activiti/server/build.${database}.properties"/>
                 </copy>
               </tasks>
             </configuration>
@@ -203,7 +203,7 @@
         <dependency>
           <groupId>jaxen</groupId>
           <artifactId>jaxen</artifactId>
-          <version>1.1.1</version>
+          <version>2.0.0</version>
           <exclusions>
             <exclusion>
               <groupId>xerces</groupId>
