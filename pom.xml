@@ -23,8 +23,8 @@
     <activiti.osgi.import.default.version>[$(version;==;$(@)),$(version;+;$(@)))</activiti.osgi.import.default.version>
     <activiti.osgi.import.defaults>
     </activiti.osgi.import.defaults>
-    <activiti.osgi.import.before.defaults />
-    <activiti.osgi.import.additional />
+    <activiti.osgi.import.before.defaults/>
+    <activiti.osgi.import.additional/>
     <activiti.osgi.import.pkg>
       org.activiti.*;${activiti.osgi.import.activiti.version},
       ${activiti.osgi.import.before.defaults},
@@ -32,7 +32,7 @@
       ${activiti.osgi.import.additional},
       *
     </activiti.osgi.import.pkg>
-    <activiti.osgi.activator />
+    <activiti.osgi.activator/>
     <activiti.osgi.failok>false</activiti.osgi.failok>
     <activiti.osgi.export>${activiti.osgi.export.pkg};${activiti.osgi.version};-noimport:=true</activiti.osgi.export>
     <!--
@@ -40,16 +40,16 @@
     <activiti.osgi.private.pkg>${activiti.artifact}*.impl</activiti.osgi.private.pkg>
     -->
     <activiti.osgi.export.pkg>${activiti.artifact}*</activiti.osgi.export.pkg>
-    <activiti.osgi.private.pkg></activiti.osgi.private.pkg>
+    <activiti.osgi.private.pkg/>
     <activiti.osgi.version>version=${project.version}</activiti.osgi.version>
     <activiti.osgi.split.pkg>-split-package:=first</activiti.osgi.split.pkg>
     <activiti.osgi.import>${activiti.osgi.import.pkg}</activiti.osgi.import>
-    <activiti.osgi.dynamic />
+    <activiti.osgi.dynamic/>
     <activiti.osgi.symbolic.name>${activiti.artifact}</activiti.osgi.symbolic.name>
     <activiti.osgi.exclude.dependencies>false</activiti.osgi.exclude.dependencies>
     <activiti.osgi.remove.headers>Ignore-Package,Include-Resource,Private-Package,Bundle-DocURL</activiti.osgi.remove.headers>
     <activiti.osgi.include.resource>{maven-resources}</activiti.osgi.include.resource>
-    <activiti.osgi.embed></activiti.osgi.embed>
+    <activiti.osgi.embed/>
   </properties>
 
   <dependencyManagement>
@@ -88,7 +88,7 @@
       <dependency>
         <groupId>commons-fileupload</groupId>
         <artifactId>commons-fileupload</artifactId>
-        <version>1.2.2</version>
+        <version>1.6.0</version>
       </dependency>
       <dependency>
         <groupId>com.oracle.jdbc</groupId>
@@ -589,7 +589,7 @@
                     </goals>
                   </pluginExecutionFilter>
                   <action>
-                    <ignore></ignore>
+                    <ignore/>
                   </action>
                 </pluginExecution>
               </pluginExecutions>
