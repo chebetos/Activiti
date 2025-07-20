@@ -16,7 +16,7 @@
     <dependency>
       <groupId>org.activiti</groupId>
       <artifactId>activiti-engine</artifactId>
-      <version>5.11-SNAPSHOT</version>
+      <version>5.14</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -144,9 +144,9 @@
                 </goals>
                 <configuration>
                   <tasks>
-                    <echo message="updating activiti configuration for ${database}" />
+                    <echo message="updating activiti configuration for ${database}"/>
                     <copy file="../../qa/upgrade/activiti.cfg.xml" todir="target/test-classes" overwrite="true">
-                      <filterset filtersfile="${user.home}/.activiti/upgrade/build.${database}.properties" />
+                      <filterset filtersfile="${user.home}/.activiti/upgrade/build.${database}.properties"/>
                     </copy>
                   </tasks>
                 </configuration>
@@ -159,8 +159,8 @@
                 </goals>
                 <configuration>
                   <tasks>
-                    <echo message="dropping schema in ${database}" />
-                    <property name="test_classpath" refid="maven.test.classpath" />
+                    <echo message="dropping schema in ${database}"/>
+                    <property name="test_classpath" refid="maven.test.classpath"/>
                     <java classname="org.activiti.engine.impl.db.DbSchemaDrop" fork="true">
                       <classpath>
                         <path path="${test_classpath}"/>
